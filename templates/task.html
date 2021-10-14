@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="{{url_for('static',filename='script.js')}}" defer></script>
+	</head>
+	
+	<body>
+		<header>
+			<p>ToDo Сервис</p>
+		</header>
+
+		<main>
+			<p>	
+				Заголовок <br>
+				<textarea rows="10" cols="45" readonly>{{ title }}</textarea>
+			</p>
+
+			<p>	
+				Описание <br>
+				<textarea rows="10" cols="45" readonly>{{ description }}</textarea>
+			</p>
+			
+			<p> <a href="/"> На главную </a> </p>
+		</main>
+	</body>
+</html>

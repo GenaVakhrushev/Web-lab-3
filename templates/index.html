@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="{{url_for('static',filename='script.js')}}" defer></script>
+	</head>
+	
+	<body>
+		<header>
+			<p>ToDo Сервис</p>
+		</header>
+
+		<main>
+			<p>	
+				Заголовок <br>
+				<input type="text" id="title">
+			</p>
+
+			<p>	
+				Описание <br>
+				<textarea rows="10" cols="45" id="description"></textarea>
+			</p>
+
+			<button onclick="create_task()">Создать задачу</button>
+			
+			<p>
+				Список задач <br>
+			</p>
+			
+			<div class="main-container">
+				{% for task in tasks %}
+					<div class="task-row" style="display: flex; flex-direction: row;">
+						<p> <a href="/task/{{ task.id }}"> {{task.title}} </a> </p>
+						<button onclick="delete_task({{ task.id }})"> Удалить </button>
+					</div>
+				{% endfor %}
+			</div>
+		</main>
+	</body>
+</html>
