@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+	<head>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="{{url_for('static',filename='script.js')}}" defer></script>
+	</head>
+	
+	<body>
+		<header>
+			<p>ToDo Сервис</p>
+		</header>
+
+		<main>
+			<p>	
+				Имя пользователя <br>
+				<input type="text" id="username">
+			</p>
+
+			<p>	
+				Пароль <br>
+				<input type="text" id="password">
+			</p>
+
+			<button onclick="login()">Войти</button>
+            <button onclick="register()">Зарегистрироваться</button>
+
+            <p id="info"> </p>
+		</main>
+	</body>
+</html>
